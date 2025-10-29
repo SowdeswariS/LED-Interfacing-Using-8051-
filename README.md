@@ -22,7 +22,28 @@ To interface an LED with the 8051 microcontroller and control its operation.
 5.	Introduce a delay.
 6.	Repeat the process continuously.
 ## Program:
+
+ORG 0000H      ; Start of program
+MOV P1, #00H   ; Set Port 1 as output
+
+MAIN:  SETB P1.0  ; Turn ON LED
+       CALL DELAY  ; Call delay function
+       CLR P1.0    ; Turn OFF LED
+       CALL DELAY  ; Call delay function
+       SJMP MAIN   ; Repeat the process
+
+DELAY: MOV R7, #255  ; Outer loop
+       MOV R6, #255  ; Inner loop
+       DJNZ R6, $    ; Decrement inner loop
+       DJNZ R7, $    ; Decrement outer loop
+       RET           ; Return from delay
+
+END
+
 ## Output:
+
+<img width="1919" height="1018" alt="Screenshot 2025-10-29 082518" src="https://github.com/user-attachments/assets/f92d5f87-9154-49a1-a557-e59ac044d1c0" />
+
 ## Result:
 The LED interfacing with the 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
 
