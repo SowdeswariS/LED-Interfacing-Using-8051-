@@ -23,23 +23,34 @@ To interface an LED with the 8051 microcontroller and control its operation.
 6.	Repeat the process continuously.
 ## Program:
 
-ORG 0000H      ; Start of program
-MOV P1, #00H   ; Set Port 1 as output
+#include<reg52.h> 
 
-MAIN:  SETB P1.0  ; Turn ON LED
-       CALL DELAY  ; Call delay function
-       CLR P1.0    ; Turn OFF LED
-       CALL DELAY  ; Call delay function
-       SJMP MAIN   ; Repeat the process
 
-DELAY: MOV R7, #255  ; Outer loop
-       MOV R6, #255  ; Inner loop
-       DJNZ R6, $    ; Decrement inner loop
-       DJNZ R7, $    ; Decrement outer loop
-       RET           ; Return from delay
+sbit LED = P2^0;
 
-END
+void Delay(void);
 
+void main(void)
+{
+    while(1)
+	  { 
+	      LED = 0;
+		    Delay();
+		    LED = 1;
+		    Delay();
+	  }
+}
+void Delay(void)
+{
+    int j;
+	  int i;
+	  for(i=0;i<10;i++)
+	  {
+	      for(j=0;j<10000;j++)
+		{
+		}
+	}
+}
 ## Output:
 <img width="1347" height="634" alt="image" src="https://github.com/user-attachments/assets/a7327699-a3b0-4f18-8c68-a0c8c673f437" />
 
