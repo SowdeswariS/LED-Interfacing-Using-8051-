@@ -41,8 +41,9 @@ DELAY: MOV R7, #255  ; Outer loop
 END
 
 ## Output:
+<img width="1347" height="634" alt="image" src="https://github.com/user-attachments/assets/a7327699-a3b0-4f18-8c68-a0c8c673f437" />
 
-<img width="1919" height="1018" alt="Screenshot 2025-10-29 082518" src="https://github.com/user-attachments/assets/f92d5f87-9154-49a1-a557-e59ac044d1c0" />
+<img width="717" height="444" alt="Screenshot 2025-11-12 092031" src="https://github.com/user-attachments/assets/a55c9119-7012-4f41-b492-f9f39e955d5a" />
 
 ## Result:
 The LED interfacing with the 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
