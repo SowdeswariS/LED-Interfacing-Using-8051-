@@ -1,4 +1,4 @@
-<img width="717" height="444" alt="Screenshot 2025-11-12 092031" src="https://github.com/user-attachments/assets/5a9503b3-da5c-4faf-ac8f-b9ca77474998" /># LED Interfacing Using 8051  
+# LED Interfacing Using 8051  
 ## Aim:
 To interface an LED with the 8051 microcontroller and control its operation.
 ## Apparatus Required:
