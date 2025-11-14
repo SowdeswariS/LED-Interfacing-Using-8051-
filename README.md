@@ -1,4 +1,4 @@
-# LED Interfacing Using 8051  
+<img width="717" height="444" alt="Screenshot 2025-11-12 092031" src="https://github.com/user-attachments/assets/5a9503b3-da5c-4faf-ac8f-b9ca77474998" /># LED Interfacing Using 8051  
 ## Aim:
 To interface an LED with the 8051 microcontroller and control its operation.
 ## Apparatus Required:
@@ -22,8 +22,22 @@ To interface an LED with the 8051 microcontroller and control its operation.
 5.	Introduce a delay.
 6.	Repeat the process continuously.
 ## Program:
-
+#include <reg51.h>
+void delay(unsigned int x)
+{
+int i;
+for(i=0;i<x;i++);
+}
+void main()
+{
+while(1)
+{
+P1=~P1;
+delay(1000);
+}
+}
 ## Output:
+<img width="717" height="444" alt="Screenshot 2025-11-12 092031" src="https://github.com/user-attachments/assets/7947aac4-e1ce-4153-91e5-0b1f0a275e81" />
 
 ## Result:
 The LED interfacing with the 8051 microcontroller has been successfully implemented and simulated using Keil and Proteus.
